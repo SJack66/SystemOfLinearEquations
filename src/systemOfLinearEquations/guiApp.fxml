@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="systemOfLinearEquations.Controller">
+    <children>
+        <VBox layoutX="11.0" layoutY="14.0" prefHeight="89.0" prefWidth="380.0">
+            <children>
+                <Text lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 700;" text="SYSTEM OF LINEAR EQUATIONS IN THE FORM:" textAlignment="CENTER" wrappingWidth="380.0">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="NONE" />
+                    </cursor>
+                </Text>
+                <Text lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="380.0">
+                    <font>
+                        <Font size="8.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="NONE" />
+                    </cursor>
+                </Text>
+                <Text lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a1 * x + b1 * y = c1" textAlignment="CENTER" wrappingWidth="380.0">
+                    <font>
+                        <Font name="System Italic" size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="NONE" />
+                    </cursor>
+                </Text>
+                <Text lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a2 * x + b2 * y = c2" textAlignment="CENTER" wrappingWidth="380.0">
+                    <font>
+                        <Font name="System Italic" size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="NONE" />
+                    </cursor>
+                </Text>
+            </children>
+        </VBox>
+        <VBox layoutX="10.0" layoutY="107.0" prefHeight="150.0" prefWidth="380.0">
+            <children>
+                <Separator prefHeight="0.0" prefWidth="580.0" valignment="TOP" />
+                <Label alignment="CENTER" contentDisplay="CENTER" lineSpacing="20.0" text="Enter values:  a1, b1, c1, a2, b2, c2">
+                    <VBox.margin>
+                        <Insets bottom="15.0" left="85.0" top="15.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <GridPane alignment="CENTER" prefHeight="83.0" prefWidth="351.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="42.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <TextField id="textField1" fx:id="textField1" alignment="CENTER" maxWidth="70.0" promptText="a1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField id="textField2" fx:id="textField2" alignment="CENTER" maxWidth="70.0" promptText="b1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </TextField>
+                        <TextField id="textField3" fx:id="textField3" alignment="CENTER" maxWidth="70.0" promptText="c1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField id="textField4" fx:id="textField4" alignment="CENTER" maxWidth="70.0" promptText="a2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <TextField id="textField5" fx:id="textField5" alignment="CENTER" maxWidth="70.0" promptText="b2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <TextField id="textField6" fx:id="textField6" alignment="CENTER" maxWidth="70.0" promptText="c2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+        <VBox layoutX="10.0" layoutY="324.0" prefHeight="120.0" prefWidth="380.0">
+            <children>
+                <Separator prefHeight="0.0" prefWidth="375.0" valignment="TOP" />
+                <Label fx:id="label" style="-fx-font-weight: 700;" text="RESULT: ">
+                    <VBox.margin>
+                        <Insets left="40.0" top="20.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Button id="buttonReset" fx:id="buttonReset" alignment="CENTER" mnemonicParsing="false" onAction="#resetData" prefWidth="90.0" styleClass="buttonReset" stylesheets="@style.css" text="Reset">
+                    <VBox.margin>
+                        <Insets left="158.0" top="30.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+        <Button fx:id="buttonCalculate" layoutX="168.0" layoutY="275.0" mnemonicParsing="false" onAction="#calculationEquations" prefWidth="90.0" styleClass="buttonCalculate" stylesheets="@style.css" text="Calculate" />
+        <LineChart fx:id="lineChart" layoutX="404.0" layoutY="17.0" prefHeight="368.0" prefWidth="432.0" title="Graph of the system of equations">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xGr" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yGr" side="LEFT" />
+            </yAxis>
+        </LineChart>
+        <Button fx:id="buttonDrawChart" layoutX="594.0" layoutY="397.0" mnemonicParsing="false" onAction="#chartsDraw" styleClass="buttonDrawChart" stylesheets="@style.css" text="Draw a graph" />
+    </children>
+    <effect>
+        <DropShadow color="#0000008b" offsetX="10.0" offsetY="10.0" spread="0.06" />
+    </effect>
+</Pane>

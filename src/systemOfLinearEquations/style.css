@@ -1,0 +1,38 @@
+.buttonCalculate {
+    -fx-background-color: #4CC417;
+    -fx-font-size: 16px;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: normal;
+}
+
+.buttonCalculate:hover {
+    -fx-background-color: #348017;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+
+.buttonReset {
+    -fx-background-color: #FF2400;
+    -fx-font-size: 16px;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: normal;
+}
+
+.buttonReset:hover {
+    -fx-background-color: #C11B17;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+
+.buttonDrawChart {
+    -fx-background-color: #1589FF;
+    -fx-font-size: 16px;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: normal;
+}
+
+.buttonDrawChart:hover {
+    -fx-background-color: #0020C2;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
